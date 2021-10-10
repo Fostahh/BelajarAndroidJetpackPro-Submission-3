@@ -17,15 +17,15 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val navController = findNavController(R.id.navHostFragment)
-//        val appBarConfiguration = AppBarConfiguration.Builder(
-//            setOf(
-//                R.id.navigation_movie,
-//                R.id.navigation_tvShow,
-//            )
-//        ).build()
-//
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//        binding.bottomNavigationView.setupWithNavController(navController)
+        val navController = findNavController(R.id.navHostFragment)
+        val appBarConfiguration = AppBarConfiguration.Builder(
+            setOf(
+                R.id.navigation_movie,
+                R.id.navigation_tvShow,
+            )
+        ).build()
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
 }
