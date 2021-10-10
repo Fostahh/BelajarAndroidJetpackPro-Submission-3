@@ -44,19 +44,19 @@ class DetailMovieActivity : AppCompatActivity(), View.OnClickListener {
             viewModel.getMovieById(id).observe(this, {
                 it.let {
                     when (it.status) {
-                        Status.LOADING -> {
-                            binding.progressBar3.visibility = View.VISIBLE
-                            binding.linearLayoutParentMovie.visibility = View.GONE
-                        }
+//                        Status.LOADING -> {
+//                            binding.progressBar3.visibility = View.VISIBLE
+//                            binding.linearLayoutParentMovie.visibility = View.GONE
+//                        }
                         Status.SUCCESS -> {
                             binding.progressBar3.visibility = View.GONE
                             binding.linearLayoutParentMovie.visibility = View.VISIBLE
                             populateMovie(it)
                         }
-                        Status.ERROR -> {
-                            binding.progressBar3.visibility = View.GONE
-                            Toast.makeText(this, "There is an error", Toast.LENGTH_SHORT).show()
-                        }
+//                        Status.ERROR -> {
+//                            binding.progressBar3.visibility = View.GONE
+//                            Toast.makeText(this, "There is an error", Toast.LENGTH_SHORT).show()
+//                        }
                     }
                 }
             })
